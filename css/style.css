@@ -3,7 +3,7 @@ body {
   height: 100%;
 }
 
-/* DASHBOARD */
+/* dashboard */
 .dashboard {
   display: grid;
   height: 100%;
@@ -15,26 +15,24 @@ body {
 .dashboard-model {
   grid-row-start: 2;
   grid-row-end: 4;
-}
 
-.dashboard-bar {
-  grid-row-start: 2;
-  grid-row-end: 3;
+  border-right: 1px solid #c7c7c7;
 }
 
 .dashboard-pie {
   grid-row-start: 3;
   grid-row-end: 4;
+
+  background: #f6f6f6;
 }
 
-.dashboard-bar,
 .dashboard-pie {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* TOOLBAR */
+/* toolbar */
 .toolbar {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -48,4 +46,20 @@ body {
 .toolbar__img {
   height: 100%;
   width: auto;
+}
+
+/* dashboard-bar */
+.dashboard-bar {
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  background: #f6f6f6;
+  border-bottom: 1px solid #c7c7c7;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-bar__top {
+  flex: 0 50px;
 }

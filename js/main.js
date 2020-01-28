@@ -33,6 +33,8 @@ Autodesk.Viewing.Initializer(options, function () {
     // The dom element, where load the viewer
     var htmlDiv = document.getElementById('forgeViewer');
     viewer = new Autodesk.Viewing.GuiViewer3D(htmlDiv, config3d);
+    
+
 
     var startedCode = viewer.start();
     if (startedCode > 0) {

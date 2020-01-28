@@ -75,6 +75,7 @@ EventsTutorial.prototype.getAllLeafComponents = function (callback) {
 
 EventsTutorial.prototype.load = function () {
     this.onLoadedModel = this.onLoadedModel.bind(this);
+    this.viewer.setBackgroundColor(246,246,246,246,246,246);
     this.viewer.addEventListener(Autodesk.Viewing.OBJECT_TREE_CREATED_EVENT, this.onLoadedModel);
     return true;
 };
