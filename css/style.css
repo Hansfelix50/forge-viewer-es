@@ -3,17 +3,28 @@ body {
   height: 100%;
 }
 
+/* DASHBOARD */
 .dashboard {
   display: grid;
   height: 100%;
   width: 100%;
   grid-template-columns: minmax(0, 1fr) minmax(0, 50vh);
-  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: 50px minmax(0, 1fr) minmax(0, 1fr);
 }
 
 .dashboard-model {
-  grid-row-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.dashboard-bar {
+  grid-row-start: 2;
   grid-row-end: 3;
+}
+
+.dashboard-pie {
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 
 .dashboard-bar,
@@ -21,4 +32,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* TOOLBAR */
+.toolbar {
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  padding: 11px 15px;
+  background-color: #2e2d2d;
+  box-shadow: 0px 2px 5px #00000040;
+  z-index: 10;
+}
+
+.toolbar__img {
+  height: 100%;
+  width: auto;
 }
