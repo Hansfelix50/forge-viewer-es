@@ -6,7 +6,7 @@ function loadBarChart(labels, series, name, modelData) {
             data: series
         }],
         chart: {
-            height: 350,
+            height: '100%',
             type: 'bar',
             events: {
                 dataPointSelection: function (event, chartContext, config) {
@@ -117,7 +117,8 @@ function loadPieChart(labels, series, name, modelData) {
     var options = {
         series: series,
         chart: {
-            width: 380,
+            // height: '100%',
+            width: '100%',
             type: 'pie',
             events: {
                 dataPointSelection: function (event, chartContext, config) {
