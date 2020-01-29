@@ -27,13 +27,18 @@ var options = {
 Autodesk.Viewing.Initializer(options, function () {
     // Extensions
     var config3d = {
-        extensions: ['forgeExtension', 'EventsTutorial', 'Autodesk.DocumentBrowser'],
+        extensions: ['forgeExtension', 'EventsTutorial', 'Autodesk.DocumentBrowser', 'Autodesk.Viewing.MarkupsCore','MarkupExtension'],
     };
 
     // The dom element, where load the viewer
     var htmlDiv = document.getElementById('forgeViewer');
     viewer = new Autodesk.Viewing.GuiViewer3D(htmlDiv, config3d);
-    
+
+
+    // viewer.addEventListener(Autodesk.Viewing.GEOMETRY_LOADED_EVENT, (x) => {
+    //     let MarkupsExtension = viewer.getExtension('Autodesk.Viewing.MarkupsCore');
+    //     MarkupsExtension.enterEditMode();
+    // })
 
 
     var startedCode = viewer.start();
@@ -74,8 +79,8 @@ buttonFloat.addEventListener('click', function name(params) {
         console.error('Failed fetching Forge manifest');
     }
 
-    function userFunction(pdb) {
-        return 42;
-    }
+    // function userFunction(pdb) {
+    //     return 42;
+    // }
 
 })
